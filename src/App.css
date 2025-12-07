@@ -28,6 +28,67 @@
   color: #61dafb;
 }
 
+body {
+  margin: 0;
+  background: #cec383;
+}
+
+.prc-main-clas {
+  background: #ac6802;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.car-main-class {
+  background: #028f6b;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*sections animaciones al hover*/
+.prc-main-clas:hover {
+  background: #e67300;
+  animation: shake 0.3s;
+}
+
+.car-main-class:hover {
+  background: #00b386;
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0px); }
+}
+
+/*imagen del texto titulo*/
+.text-background-clip {
+  font-size: 60px;        /* tamaño del texto */
+  font-weight: bold;
+  text-transform: uppercase;
+  background: url('../public/icons/tacamabromich.jpg'); /* tu imagen */
+  background-size: cover;
+  background-position: 0 0;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: moveBg 10s linear infinite;
+}
+
+@keyframes moveBg {
+  0% { background-position: 0 0; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0 0; }
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +97,5 @@
     transform: rotate(360deg);
   }
 }
+
+
